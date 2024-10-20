@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1729401313 source:f:\实验2-2\迷宫\main.cpp
+	<iostream>
+	<vector>
+	<cstdlib>
+	<ctime>
+	"Maze.h"
+	"Point.h"
+	"Queue.h"
+	"Stack.h"
+	"BFS.h"
+	"container.h"
+
+1729401491 source:f:\实验2-2\迷宫\maze.cpp
+	<iostream>
+	<vector>
+	<cstdlib>
+	"Maze.h"
+	"Stack.h"
+	"container.h"
+
+1729336845 f:\实验2-2\迷宫\maze.h
+	<vector>
+	"Point.h"
+
+1729336821 f:\实验2-2\迷宫\point.h
+
+1729336834 f:\实验2-2\迷宫\stack.h
+	"Point.h"
+
+1729336827 f:\实验2-2\迷宫\queue.h
+	"Point.h"
+
+1729336775 source:f:\实验2-2\迷宫\queue.cpp
+	"Queue.h"
+
+1729336793 source:f:\实验2-2\迷宫\stack.cpp
+	"Stack.h"
+
+1729336981 source:f:\实验2-2\迷宫\bfs.cpp
+	<vector>
+	<algorithm>
+	"BFS.h"
+	"Queue.h"
+	"container.h"
+
+1729336851 f:\实验2-2\迷宫\bfs.h
+	<vector>
+	"Point.h"
+
+1729337017 f:\实验2-2\迷宫\container.h
+
