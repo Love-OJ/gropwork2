@@ -1,30 +1,32 @@
+
+//é˜Ÿåˆ—åœ¨bfsçš„æ—¶å€™ä½¿ç”¨
 #include "Queue.h"
 
-// ³õÊ¼»¯¶ÓÁÐ
+// åˆå§‹åŒ–é˜Ÿåˆ—
 void initQueue(Queue* q) {
-    q->front = 0;  // ¶ÓÍ·Ö¸Õë³õÊ¼»¯Îª0
-    q->rear = 0;   // ¶ÓÎ²Ö¸Õë³õÊ¼»¯Îª0
+    q->front = 0;  // é˜Ÿå¤´æŒ‡é’ˆåˆå§‹åŒ–ä¸º0
+    q->rear = 0;   // é˜Ÿå°¾æŒ‡é’ˆåˆå§‹åŒ–ä¸º0
 }
 
-// Èë¶Ó²Ù×÷
+// å…¥é˜Ÿæ“ä½œ
 void enqueue(Queue* q, const Point& p) {
-    if ((q->rear + 1) % MAX_QUEUE_SIZE != q->front) {  // ¼ì²é¶ÓÁÐÊÇ·ñÂú
-        q->data[q->rear] = p;  // ÔÚ¶ÓÎ²²åÈëÔªËØ
-        q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;  // ¸üÐÂ¶ÓÎ²Ö¸Õë
+    if ((q->rear + 1) % MAX_QUEUE_SIZE != q->front) {  // æ£€æŸ¥é˜Ÿåˆ—æ˜¯å¦æ»¡
+        q->data[q->rear] = p;  // åœ¨é˜Ÿå°¾æ’å…¥å…ƒç´ 
+        q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;  // æ›´æ–°é˜Ÿå°¾æŒ‡é’ˆ
     }
 }
 
-// ³ö¶Ó²Ù×÷
+// å‡ºé˜Ÿæ“ä½œ
 Point dequeue(Queue* q) {
-    Point p = {-1, -1};  // Ä¬ÈÏ·µ»ØÖµ
-    if (q->front != q->rear) {  // ¼ì²é¶ÓÁÐÊÇ·ñ¿Õ
-        p = q->data[q->front];  // È¡³ö¶ÓÍ·ÔªËØ
-        q->front = (q->front + 1) % MAX_QUEUE_SIZE;  // ¸üÐÂ¶ÓÍ·Ö¸Õë
+    Point p = {-1, -1};  // é»˜è®¤è¿”å›žå€¼
+    if (q->front != q->rear) {  // æ£€æŸ¥é˜Ÿåˆ—æ˜¯å¦ç©º
+        p = q->data[q->front];  // å–å‡ºé˜Ÿå¤´å…ƒç´ 
+        q->front = (q->front + 1) % MAX_QUEUE_SIZE;  // æ›´æ–°é˜Ÿå¤´æŒ‡é’ˆ
     }
-    return p;  // ·µ»Ø³ö¶ÓµÄÔªËØ
+    return p;  // è¿”å›žå‡ºé˜Ÿçš„å…ƒç´ 
 }
 
-// ÅÐ¶Ï¶ÓÁÐÊÇ·ñÎª¿Õ
+// åˆ¤æ–­é˜Ÿåˆ—æ˜¯å¦ä¸ºç©º
 bool isQueueEmpty(const Queue* q) {
-    return q->front == q->rear;  // ¶ÓÍ·Ö¸ÕëµÈÓÚ¶ÓÎ²Ö¸ÕëÊ±£¬¶ÓÁÐÎª¿Õ
+    return q->front == q->rear;  // é˜Ÿå¤´æŒ‡é’ˆç­‰äºŽé˜Ÿå°¾æŒ‡é’ˆæ—¶ï¼Œé˜Ÿåˆ—ä¸ºç©º
 }
